@@ -12,6 +12,7 @@
  * For more information on configuring datastores, check out:
  * https://sailsjs.com/config/datastores
  */
+const sqlite3 = require('sqlite3');
 
 module.exports.datastores = {
 
@@ -50,7 +51,10 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
-
+    adapter: 'sails-sqlite3',
+    filename: './db/paymentflow.sqlite3',
+    mode: sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    verbose: false
   },
 
 

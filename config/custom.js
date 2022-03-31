@@ -69,7 +69,7 @@ module.exports.custom = {
 
   // The sender that all outgoing emails will appear to come from.
   fromEmailAddress: 'noreply@example.com',
-  fromName: 'The NEW_APP_NAME Team',
+  fromName: 'Patrick Parker <patrick204nqh@outlook.com>',
 
   // Email address for receiving support messages & other correspondences.
   // > If you're using the default privacy policy, this will be referenced
@@ -101,5 +101,7 @@ module.exports.custom = {
   *                                                                          *
   ***************************************************************************/
   // …
-
+  
+  stripePublishableKey: 'pk_test_51KjQdgCs22Iq9XVck85yIlRkDv4nFRnE7cvpC2xkBFGs0scTNE3KFGqufN3VRjP4cbwKLjLpNNHaMxU6Ewyr4PPx00N9J9pO3G',
+  stripeSecretKey: 'sk_test_51KjQdgCs22Iq9XVcuOnt9O6IGHloQ5LU2sy1xZMXejPyV1mhZTDIYbj2q1H0gQuryS2ojsuam19IYmWzROAdGkyX006QTzY9VL',
 };
