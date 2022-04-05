@@ -52,7 +52,7 @@ module.exports.datastores = {
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
     adapter: 'sails-sqlite3',
-    filename: './db/paymentflow.sqlite3',
+    filename: './db/paymentflow.db',
     mode: sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     verbose: false
   },

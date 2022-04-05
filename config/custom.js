@@ -88,8 +88,9 @@ module.exports.custom = {
   * (https://dashboard.stripe.com/account/apikeys)                          *
   *                                                                         *
   **************************************************************************/
-  // stripePublishableKey: 'pk_test_Zzd814nldl91104qor5911gjald',
-  // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
+  enableBillingFeatures: true,
+  stripePublishableKey: 'pk_test_51KjQdgCs22Iq9XVck85yIlRkDv4nFRnE7cvpC2xkBFGs0scTNE3KFGqufN3VRjP4cbwKLjLpNNHaMxU6Ewyr4PPx00N9J9pO3G',
+  stripeSecret: 'sk_test_51KjQdgCs22Iq9XVcuOnt9O6IGHloQ5LU2sy1xZMXejPyV1mhZTDIYbj2q1H0gQuryS2ojsuam19IYmWzROAdGkyX006QTzY9VL',
   //--------------------------------------------------------------------------
   // /\  Configure these to enable support for billing features.
   // ||  (Or if you don't need billing, feel free to remove them.)
@@ -101,7 +102,5 @@ module.exports.custom = {
   *                                                                          *
   ***************************************************************************/
   // …
-  
-  stripePublishableKey: 'pk_test_51KjQdgCs22Iq9XVck85yIlRkDv4nFRnE7cvpC2xkBFGs0scTNE3KFGqufN3VRjP4cbwKLjLpNNHaMxU6Ewyr4PPx00N9J9pO3G',
-  stripeSecretKey: 'sk_test_51KjQdgCs22Iq9XVcuOnt9O6IGHloQ5LU2sy1xZMXejPyV1mhZTDIYbj2q1H0gQuryS2ojsuam19IYmWzROAdGkyX006QTzY9VL',
+
 };
