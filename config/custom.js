@@ -32,15 +32,15 @@ module.exports.custom = {
   * > that is displayed all over the app when it's first generated.         *
   *                                                                         *
   **************************************************************************/
-  platformCopyrightYear: '2021',
+  // platformCopyrightYear: '2021',
 
   /**************************************************************************
   *                                                                         *
   * The TTL (time-to-live) for various sorts of tokens before they expire.  *
   *                                                                         *
   **************************************************************************/
-  passwordResetTokenTTL: 24*60*60*1000,// 24 hours
-  emailProofTokenTTL:    24*60*60*1000,// 24 hours
+  // passwordResetTokenTTL: 24*60*60*1000,// 24 hours
+  // emailProofTokenTTL:    24*60*60*1000,// 24 hours
 
   /**************************************************************************
   *                                                                         *
@@ -48,7 +48,7 @@ module.exports.custom = {
   * if "Remember Me" was checked while logging in.                          *
   *                                                                         *
   **************************************************************************/
-  rememberMeCookieMaxAge: 30*24*60*60*1000, // 30 days
+  // rememberMeCookieMaxAge: 30*24*60*60*1000, // 30 days
 
   /**************************************************************************
   *                                                                         *
@@ -75,11 +75,11 @@ module.exports.custom = {
   // > If you're using the default privacy policy, this will be referenced
   // > as the contact email of your "data protection officer" for the purpose
   // > of compliance with regulations such as GDPR.
-  internalEmailAddress: 'support+development@example.com',
+  // internalEmailAddress: 'support+development@example.com',
 
   // Whether to require proof of email address ownership any time a new user
   // signs up, or when an existing user attempts to change their email address.
-  verifyEmailAddresses: false,
+  // verifyEmailAddresses: false,
 
   /**************************************************************************
   *                                                                         *
