@@ -26,24 +26,11 @@ module.exports = function defineCustomHook(sails) {
 
 function setupGraphql() {
   const { graphqlHTTP } = require('express-graphql');
-  const { buildSchema } = require('graphql');
-
-  var schema = buildSchema(`
-    type Query {
-      hello: String
-    }
-  `);
-
-  var root = {
-    hello: () => {
-      return 'Hello world!';
-    },
-  };
+  const { graphqlSchema } = require('../../graphql/schema');
 
   sails.hooks.http.app.use('/graphql',
     graphqlHTTP((req, res) => ({
-      schema: schema,
-      rootValue: root,
+      schema: graphqlSchema,
       context: { req },
       graphiql: true
     }))
