@@ -12,7 +12,13 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    emailAddress: {
+    username: {
+      type: 'string',
+      required: true,
+      protect: true,
+    },
+
+    email: {
       type: 'string',
       required: true,
       unique: true,
@@ -20,13 +26,7 @@ module.exports = {
       maxLength: 200,
     },
 
-    emailStatus: {
-      type: 'string',
-      isIn: ['unconfirmed', 'change-requested', 'confirmed'],
-      defaultsTo: 'confirmed',
-    },
-
-    phoneNumber: {
+    phone: {
       type: 'string',
       maxLength: 15
     },
@@ -39,13 +39,13 @@ module.exports = {
 
     firstName: {
       type: 'string',
-      required: true,
+      required: false,
       maxLength: 120,
     },
 
     lastName: {
       type: 'string',
-      required: true,
+      required: false,
       maxLength: 120,
     },
 
