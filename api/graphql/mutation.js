@@ -3,13 +3,14 @@ const {
   GraphQLNonNull,
   GraphQLString
 } = require('graphql');
-const userType = require('./types/user');
+const signupType = require('./types/signup');
+const signinType = require('./types/signin');
 
 module.exports = new GraphQLObjectType({
   name: 'MutationRoot',
   fields: {
     signup: {
-      type: userType,
+      type: signupType,
       args: {
         username: {
           type: new GraphQLNonNull(GraphQLString)
@@ -21,8 +22,25 @@ module.exports = new GraphQLObjectType({
           type: new GraphQLNonNull(GraphQLString)
         },
       },
-      resolve(root, {username, email, password}) {
-        return UserService.signup({username, email, password});
+      resolve(_object, {username, email, password}) {
+        return AuthService.signup({username, email, password});
+      }
+    },
+    signin: {
+      type: signinType,
+      args: {
+        username: {
+          type: GraphQLString
+        },
+        email: {
+          type: GraphQLString
+        },
+        password: {
+          type: new GraphQLNonNull(GraphQLString)
+        },
+      },
+      resolve(_object, {username, email, password}) {
+        return AuthService.signin({username, email, password});
       }
     }
   }

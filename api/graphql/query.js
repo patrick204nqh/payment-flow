@@ -7,18 +7,13 @@ const userType = require('./types/user');
 module.exports = new GraphQLObjectType({
   name: 'QueryRoot',
   fields: {
-    // test: {
-    //   type: GraphQLString,
-    //   args: {
-    //     who: {
-    //       type: GraphQLString
-    //     }
-    //   },
-    //   resolve: (root, { who }) => 'Hello ' + ((who: any) || 'World')
+    user: {
+      type: userType,
+      resolve: (_object, _args, { currentUser }) => currentUser
+    }
+    // users: {
+    //   type: new GraphQLList(userType),
+    //   resolve: (root, _) => []
     // },
-    users: {
-      type: new GraphQLList(userType),
-      resolve: (root, _) => []
-    },
   }
 });

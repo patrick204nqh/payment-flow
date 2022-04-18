@@ -29,10 +29,12 @@ function setupGraphql() {
   const { graphqlSchema } = require('../../graphql/schema');
 
   sails.hooks.http.app.use('/graphql',
-    graphqlHTTP((req, res) => ({
-      schema: graphqlSchema,
-      context: { req },
-      graphiql: true
-    }))
+    graphqlHTTP((req, res) => {
+      return {
+        schema: graphqlSchema,
+        context: GraphqlService.setGqlContext(req),
+        graphiql: true
+      }
+    })
   );
 }
