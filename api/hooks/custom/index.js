@@ -3,6 +3,7 @@ module.exports = function defineCustomHook() {
   return {
 
     initialize: async function () {
+      setupAssetPipeline();
       setupGraphql();
     },
 
@@ -23,6 +24,11 @@ module.exports = function defineCustomHook() {
   };
 
 };
+
+function setupAssetPipeline() {
+  const express = require('express');
+  sails.hooks.http.app.use(express.static(require('path').join(sails.config.appPath, 'public')));
+}
 
 function setupGraphql() {
   const { graphqlHTTP } = require('express-graphql');
