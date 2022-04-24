@@ -12,7 +12,7 @@ module.exports.routes = {
 
   //  pages
   'get /':             'HomeController.index',
-  'get /dashboard':             'DashboardController.index'
+  'get /dashboard':             'DashboardController.index',
   'get /login':             'AuthController.login'
 
   //  downloads
