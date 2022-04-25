@@ -11,9 +11,10 @@
 module.exports.routes = {
 
   //  pages
-  'get /':             'HomeController.index',
-  'get /dashboard':             'DashboardController.index',
-  'get /login':             'AuthController.login'
+  'get /':                            'HomeController.index',
+  'get /login':                       'AuthController.login',
+  'get /admin/dashboard':             'admin/DashboardController.index'
+  // 'get /admin/users':             'admin/UsersController.index'
 
   //  downloads
   //  webhooks
