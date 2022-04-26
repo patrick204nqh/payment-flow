@@ -10,10 +10,10 @@ module.exports = new GraphQLObjectType({
     user: {
       type: userType,
       resolve: (_object, _args, { currentUser }) => currentUser
-    }
-    // users: {
-    //   type: new GraphQLList(userType),
-    //   resolve: (root, _) => []
-    // },
+    },
+    users: {
+      type: new GraphQLList(userType),
+      resolve: async (_object, _args, _context) => await User.find()
+    },
   }
 });

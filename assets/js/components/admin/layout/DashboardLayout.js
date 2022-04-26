@@ -3,9 +3,9 @@ import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import {
   CssBaseline, Box, List, Typography, Container, Link, Toolbar, Grid, Paper
 } from '@mui/material';
+import LayoutContext from '../../../context/LayoutContext';
 import DashboardNavbar from './navbar/DashboardNavbar';
 import DashboardSidebar from './sidebar/DashboardSidebar';
-import LayoutContext from '../../../context/LayoutContext';
 import Copyright from '../../copyright/Copyright';
 
 const mdTheme = createTheme();
