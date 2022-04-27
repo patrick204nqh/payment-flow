@@ -35,6 +35,9 @@ export default function Users() {
 
   const options = {
     filterType: 'checkbox',
+    // responsive: 'stacked',
+    sort: false,
+    onRowClick: (rowData, rowMeta) => (window.location.href = `/admin/users/${rowData[0]}`)
   };
 
   return (

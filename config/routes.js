@@ -13,8 +13,9 @@ module.exports.routes = {
   //  pages
   'get /':                            'HomeController.index',
   'get /login':                       'AuthController.login',
-  'get /admin/dashboard':             'admin/DashboardController.index'
-  // 'get /admin/users':             'admin/UsersController.index'
+  'get /admin/dashboard':             'admin/DashboardController.index',
+  'get /admin/users':                 'admin/UsersController.index',
+  'get /admin/users/:user_id':             'admin/UsersController.edit'
 
   //  downloads
   //  webhooks
