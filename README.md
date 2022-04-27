@@ -1,7 +1,7 @@
 # PAYMENT FLOW
 
 1. Information
-- Frameworks: Sails.js
+- Frameworks: Sails.js, Next.js
 - Database: SQLite3
 
 2. Setup

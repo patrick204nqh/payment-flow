@@ -14,6 +14,16 @@ module.exports.next = {
     // Hide error messages
     quiet: false,
     // Equivalent to a `next.config.js` file
-    conf: {}
-  }
+    conf: {
+      webpack: (config, options) => {
+        config.module.rules.push({
+          test: /\.(graphql|gql)$/,
+          exclude: /node_modules/,
+          loader: '@graphql-tools/webpack-loader'
+        })
+
+        return config
+      },
+    }
+  },
 }

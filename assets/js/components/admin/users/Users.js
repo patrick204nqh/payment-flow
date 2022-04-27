@@ -1,18 +1,35 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { loadSchemaSync } from "@graphql-tools/load";
-import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
 import DataTable from '../../partials/datatable/DataTable';
 import DashboardLayout from '../layout/DashboardLayout';
-
-const USERS_QUERY = loadSchemaSync('./UsersQuery.gql', { loaders: [new GraphQLFileLoader()] });
+import UsersQuery from './UsersQuery.gql'
 
 export default function Users() {
-  const { loading, error, data } = useQuery(USERS_QUERY);
+  const { loading, error, data } = useQuery(UsersQuery);
   const columns = [
     {
       name: "id",
       label: "ID",
+    },
+    {
+      name: "username",
+      label: "Username",
+    },
+    {
+      name: "firstName",
+      label: "First name",
+    },
+    {
+      name: "lastName",
+      label: "Last name",
+    },
+    {
+      name: "email",
+      label: "Email",
+    },
+    {
+      name: "phone",
+      label: "Phone",
     },
   ];
 
@@ -22,7 +39,7 @@ export default function Users() {
 
   return (
     <DashboardLayout>
-      <DataTable columns={columns} options={options} data={data.users} />
+      <DataTable columns={columns} options={options} data={data?.users} />
     </DashboardLayout>
   );
 }
