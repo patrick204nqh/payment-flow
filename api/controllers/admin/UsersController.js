@@ -8,8 +8,9 @@ module.exports = {
     // merged together so that the `query` can still get accessed by the `getInitialProps()` method.
     sails.config.next.app.render(req, res, '/admin/users', { ...params, ...query })
   },
-  edit (req, res) {
+  show (req, res) {
     const { params, query } = req
-    sails.config.next.app.render(req, res, '/admin/users', { ...params, ...query })
-  }
+
+    sails.config.next.app.render(req, res, '/admin/users/show', { ...params, ...query })
+  },
 };

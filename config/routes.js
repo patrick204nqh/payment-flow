@@ -15,7 +15,7 @@ module.exports.routes = {
   'get /login':                       'AuthController.login',
   'get /admin/dashboard':             'admin/DashboardController.index',
   'get /admin/users':                 'admin/UsersController.index',
-  'get /admin/users/:user_id':             'admin/UsersController.edit'
+  'get /admin/users/:userId':        'admin/UsersController.show'
 
   //  downloads
   //  webhooks
